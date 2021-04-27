@@ -22,14 +22,19 @@ a{
     @include btn-primary
 }
 
-main{
+section{
     @include padding;
 }
 
-// .lg-p{
+.lg-p{
+    font-size: 21px;
+    color: $color-secondary;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
 
-// }
+.sm-p{
+    color: $color-secondary;
+    line-height: 30px;
 
-// .sm-p{
-
-// }
+}

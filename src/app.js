@@ -4,7 +4,15 @@ function initVue() {
 
 
             el: '#app',
-            data: {
+            'data': {
+                navOption:[
+                    'HOME',
+                    'ABOUT',
+                    'PRICES',
+                    'COURSES',
+                    'LOCATIONS',
+                    'BLOG'
+                ]
 
             }
     })
@@ -12,7 +20,7 @@ function initVue() {
 
 function init() {
 
-    // initVue();
+    initVue();
 
 
 }

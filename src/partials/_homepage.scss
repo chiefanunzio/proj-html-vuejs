@@ -26,7 +26,7 @@ header {
 
     }
 
-    div {
+    >div {
         background: $bg-navbar;
         color: $color-secondary;
         display: flex;
@@ -56,11 +56,25 @@ header {
             justify-content: space-between;
             align-items: baseline;
 
+            li>div {
+                position: absolute;
+                left: 0;
+                bottom: -7px;
+                width: 100%;
+                background-color: $color-light;
+                border-radius: 50px;
+                height: 2px;
+                width: 0%;
+
+                transition: width 0.5s;
+            }
+
             .menu {
-                &:hover {
-                    border-bottom: 2px solid $color-light;
-                    transform: scaleX(1);
-                    transition: transform .4s ease-in-out;
+                position: relative;
+                margin-top: 20px;
+
+                &:hover>div {
+                    width: 100%;
                 }
 
 
@@ -69,7 +83,7 @@ header {
 
                     &:hover {
                         color: $color-strong;
-                        transition: 0.3s;
+                        transition: 0.5s;
                     }
                 }
             }
@@ -84,9 +98,93 @@ header {
 }
 
 .form-section {
+    display: flex;
+    position: relative;
     height: 90vh;
+    padding-top: 80px;
+    padding-bottom: 80px;
 
     div {
-        width: 50%;
+        width: 45%;
+
+        h2 {
+            font-size: 40px;
+            color: $color-secondary-title;
+            margin-bottom: 30px;
+        }
     }
+
+}
+
+.form-card {
+    position: absolute;
+    background-color: #fff;
+    top: -50px;
+    right: 180px;
+    max-width: 500px;
+    box-shadow: $shadow;
+    border-radius: 10px;
+    padding: 40px 50px;
+    text-align: center;
+    z-index: 99;
+
+    h3 {
+        color: $color-strong;
+        margin-bottom: 40px;
+        font-size: 30px;
+    }
+
+    ul {
+        li {
+            margin: 30px 0;
+            border: 2px solid #d8d8d8;
+            border-radius: 5px;
+        }
+
+        input {
+            background-color: #e4e2e2e0;
+            padding: 15px 1em;
+            width: 100%;
+            outline: 0;
+            border: none;
+
+        }
+    }
+}
+
+.learn-sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 60px 180px;
+    background-image: url('img/bg-car.jpg');
+    background-size: cover;
+    color: $color-primary;
+
+    h2 {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+
+    span {
+        margin-right: 80px;
+        font-size: 35px;
+    }
+}
+
+.sec-course {
+    position: relative;
+    height: 70vh;
+    background-image: url('img/bg-car-w.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+
+    #triangle {
+
+        @include triangle;
+
+    }
+
 }

@@ -20,7 +20,7 @@ header #title h3 {
   font-weight: 500;
   line-height: 60px;
 }
-header div {
+header > div {
   background: #484848;
   color: #929aa3;
   display: flex;
@@ -47,17 +47,30 @@ header nav ul {
   justify-content: space-between;
   align-items: baseline;
 }
-header nav ul .menu:hover {
-  border-bottom: 2px solid #7abc64;
-  transform: scaleX(1);
-  transition: transform 0.4s ease-in-out;
+header nav ul li > div {
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 100%;
+  background-color: #7abc64;
+  border-radius: 50px;
+  height: 2px;
+  width: 0%;
+  transition: width 0.5s;
+}
+header nav ul .menu {
+  position: relative;
+  margin-top: 20px;
+}
+header nav ul .menu:hover > div {
+  width: 100%;
 }
 header nav ul .menu a {
   color: white;
 }
 header nav ul .menu a:hover {
   color: #69aa53;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .fix-button {
@@ -84,10 +97,88 @@ header nav ul .menu a:hover {
 }
 
 .form-section {
+  display: flex;
+  position: relative;
   height: 90vh;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 .form-section div {
-  width: 50%;
+  width: 45%;
+}
+.form-section div h2 {
+  font-size: 40px;
+  color: #494c4e;
+  margin-bottom: 30px;
+}
+
+.form-card {
+  position: absolute;
+  background-color: #fff;
+  top: -50px;
+  right: 180px;
+  max-width: 500px;
+  box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 40px 50px;
+  text-align: center;
+  z-index: 99;
+}
+.form-card h3 {
+  color: #69aa53;
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+.form-card ul li {
+  margin: 30px 0;
+  border: 2px solid #d8d8d8;
+  border-radius: 5px;
+}
+.form-card ul input {
+  background-color: #e4e2e2e0;
+  padding: 15px 1em;
+  width: 100%;
+  outline: 0;
+  border: none;
+}
+
+.learn-sec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 60px 180px;
+  background-image: url("img/bg-car.jpg");
+  background-size: cover;
+  color: white;
+}
+.learn-sec h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+.learn-sec span {
+  margin-right: 80px;
+  font-size: 35px;
+}
+
+.sec-course {
+  position: relative;
+  height: 70vh;
+  background-image: url("img/bg-car-w.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+.sec-course #triangle {
+  position: absolute;
+  left: 0;
+  bottom: -199px;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  border-top: 200px solid #e4eaed;
+  border-left: 800px solid transparent;
+  border-right: 710px solid transparent;
 }
 
 * {
@@ -115,8 +206,21 @@ a {
 }
 .btn-primary:hover {
   background-color: #69aa53;
+  transition: 0.4s;
 }
 
-main {
+section {
   padding: 0 200px;
+}
+
+.lg-p {
+  font-size: 21px;
+  color: #929aa3;
+  line-height: 40px;
+  margin-bottom: 30px;
+}
+
+.sm-p {
+  color: #929aa3;
+  line-height: 30px;
 }
