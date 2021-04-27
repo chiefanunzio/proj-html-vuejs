@@ -1,0 +1,54 @@
+// colori di root
+$color-primary:white;
+$color-secondary:#929aa3;
+$color-light:#7abc64;
+
+$color-strong:#69aa53;
+$color-plus: #0f1d1f;
+//bg
+$bg-nav:rgba(68, 66, 66, 0.3);
+$bg-navbar:#484848;
+$bg-rotate:#e5e8eb;
+
+// misura standard laterale
+@mixin padding{
+    padding: 0 200px;
+}
+// regole dei button classici
+@mixin btn-primary{
+    padding: 13px 29px;
+    font-size: 13px;
+    font-weight: 700;
+    background-color:$color-light;
+    border-radius: 25px;
+    color:$color-primary;
+    &:hover{
+        background-color: $color-strong;
+    }
+}
+// regole dei btn in fix
+@mixin fix-btn{
+
+    position: fixed;
+    top: 140px;
+    right: 15px;
+    div{
+        box-shadow: 0 0 25px 5px rgb(0 0 0 / 20%);
+        text-align: center;
+        margin-bottom: 10px;
+        padding: 10px 12px;
+        border-radius: 7px;
+        background-color: #fff;
+
+        img{
+            display: block;
+            width: 40px;
+        }
+        span{
+            font-size: 12px;
+            font-weight: 700;
+            color: $color-plus;
+        }
+    }
+
+}

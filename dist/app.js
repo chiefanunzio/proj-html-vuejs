@@ -7,11 +7,17 @@
   \********************/
 /***/ (() => {
 
-function init() {
-  console.log('hello world');
+function initVue() {
+  new Vue({
+    el: '#app',
+    data: {}
+  });
 }
 
-init();
+function init() {// initVue();
+}
+
+document.addEventListener('DOMContentLoaded', init);
 
 /***/ }),
 

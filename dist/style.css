@@ -1,6 +1,122 @@
-body {
-  background-color: aqua;
+header {
+  background-image: url("img/jumbo.jpg");
+  background-size: cover;
+  background-position: -180px 0px;
+  height: 88vh;
 }
-body h1 {
-  color: blueviolet;
+header #title {
+  color: white;
+  background-color: transparent;
+  width: 70%;
+  height: 450px;
+  justify-content: center;
+  flex-direction: column;
+}
+header #title h1 {
+  font-size: 60px;
+}
+header #title h3 {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 60px;
+}
+header div {
+  background: #484848;
+  color: #929aa3;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 200px;
+  font-size: 12px;
+}
+header nav {
+  padding: 0 200px;
+  background-color: rgba(68, 66, 66, 0.3);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav img {
+  max-height: 48px;
+  margin-right: 100px;
+}
+header nav ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: baseline;
+}
+header nav ul .menu:hover {
+  border-bottom: 2px solid #7abc64;
+  transform: scaleX(1);
+  transition: transform 0.4s ease-in-out;
+}
+header nav ul .menu a {
+  color: white;
+}
+header nav ul .menu a:hover {
+  color: #69aa53;
+  transition: 0.3s;
+}
+
+.fix-button {
+  position: fixed;
+  top: 140px;
+  right: 15px;
+}
+.fix-button div {
+  box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 10px 12px;
+  border-radius: 7px;
+  background-color: #fff;
+}
+.fix-button div img {
+  display: block;
+  width: 40px;
+}
+.fix-button div span {
+  font-size: 12px;
+  font-weight: 700;
+  color: #0f1d1f;
+}
+
+.form-section {
+  height: 90vh;
+}
+.form-section div {
+  width: 50%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-primary {
+  padding: 13px 29px;
+  font-size: 13px;
+  font-weight: 700;
+  background-color: #7abc64;
+  border-radius: 25px;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #69aa53;
+}
+
+main {
+  padding: 0 200px;
 }

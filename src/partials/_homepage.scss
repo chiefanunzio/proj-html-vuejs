@@ -1,0 +1,92 @@
+@import 'variables';
+
+header {
+    background-image: url('img/jumbo.jpg');
+    background-size: cover;
+    background-position: -180px 0px;
+    height: 88vh;
+
+    #title {
+        color: $color-primary;
+        background-color: transparent;
+        width: 70%;
+        height: 450px;
+        justify-content: center;
+        flex-direction: column;
+
+        h1 {
+            font-size: 60px;
+        }
+
+        h3 {
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 60px;
+        }
+
+    }
+
+    div {
+        background: $bg-navbar;
+        color: $color-secondary;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 200px;
+        font-size: 12px;
+    }
+
+    nav {
+        @include padding;
+
+        background-color: $bg-nav;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            max-height: 48px;
+            margin-right: 100px;
+        }
+
+        ul {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: baseline;
+
+            .menu {
+                &:hover {
+                    border-bottom: 2px solid $color-light;
+                    transform: scaleX(1);
+                    transition: transform .4s ease-in-out;
+                }
+
+
+                a {
+                    color: $color-primary;
+
+                    &:hover {
+                        color: $color-strong;
+                        transition: 0.3s;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+// bottoni in fixed laterali
+.fix-button {
+    @include fix-btn;
+}
+
+.form-section {
+    height: 90vh;
+
+    div {
+        width: 50%;
+    }
+}

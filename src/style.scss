@@ -1,6 +1,35 @@
-body{
-    background-color:aqua;
-    h1{
-        color: blueviolet;
-    }
+@import 'partials/homepage';
+@import 'partials/variables';
+
+// proprieta root
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
 }
+
+ul li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    
+}
+
+.btn-primary{
+    @include btn-primary
+}
+
+main{
+    @include padding;
+}
+
+// .lg-p{
+
+// }
+
+// .sm-p{
+
+// }
