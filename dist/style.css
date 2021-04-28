@@ -136,13 +136,6 @@ header nav ul .menu a:hover {
   border: 2px solid #d8d8d8;
   border-radius: 5px;
 }
-.form-card ul input {
-  background-color: #d8d8d8;
-  padding: 15px 1em;
-  width: 100%;
-  outline: 0;
-  border: none;
-}
 
 .sec-learn {
   display: flex;
@@ -319,11 +312,6 @@ header nav ul .menu a:hover {
   width: calc(100% / 3 - 8px);
   border-top: 6px solid #7abc64;
 }
-.sec-card-instructors div::after {
-  content: "";
-  display: table;
-  clear: both;
-}
 .sec-card-instructors div img {
   width: 100%;
   transition: 0.3s ease-in-out;
@@ -373,14 +361,18 @@ header nav ul .menu a:hover {
 .sec-news {
   background-image: url("img/bg-news.jpg");
   background-size: cover;
+  padding-bottom: 180px;
 }
 .sec-news > div {
+  position: relative;
   margin-top: -120px;
-  text-align: center;
   background-color: white;
   padding: 50px 55px;
   border-top: 7px solid #7799ad;
   border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  text-align: center;
 }
 .sec-news > div h2 {
   font-size: 40px;
@@ -389,20 +381,164 @@ header nav ul .menu a:hover {
   margin-bottom: 40px;
 }
 .sec-news > div div {
+  overflow: hidden;
   display: flex;
-  justify-content: space-between;
 }
 .sec-news > div div div {
   display: flex;
   flex-direction: column;
-  width: calc(100%/2 - 15px);
-  height: 500px;
+  width: 100%;
+}
+.sec-news > div div div h3 {
+  font-size: 20px;
+  color: #7abc64;
+}
+.sec-news > div div div span {
+  color: #a7adb4;
+  font-size: 13px;
+  margin: 10px 0 20px;
+}
+.sec-news > div div div span span {
+  color: #7abc64;
+}
+.sec-news > div div .info {
+  width: 80%;
+  margin: auto;
+}
+.sec-news > div div .bg-container {
+  overflow: hidden;
+  margin: 20px 20px;
+  height: 300px;
 }
 .sec-news > div div .img-1 {
   background-image: url("img/blog-1.jpg");
 }
 .sec-news > div div .img-2 {
   background-image: url("img/blog-2.jpg");
+}
+.sec-news > div #bottom-blog {
+  position: absolute;
+  left: 0;
+  bottom: -98px;
+}
+.sec-news > div #bottom-blog img {
+  width: 100%;
+}
+
+.sec-mail {
+  background-image: url("img/mail.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+.sec-mail div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 55%;
+  text-align: center;
+  margin: auto;
+}
+.sec-mail div h2 {
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+.sec-mail div input {
+  background-color: #f7f7f7;
+  border-radius: 4px;
+  border: 1px solid #d8d8d8;
+}
+.sec-mail div span {
+  color: #929aa3;
+}
+.sec-mail div * {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.sec-pre-footer {
+  background-image: url("img/footer.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+}
+.sec-pre-footer div {
+  flex-basis: 30%;
+}
+.sec-pre-footer div img {
+  width: 80%;
+}
+.sec-pre-footer div span {
+  color: #929aa3;
+  font-size: 13px;
+}
+.sec-pre-footer div p {
+  font-size: 13px;
+}
+.sec-pre-footer div h3 {
+  color: white;
+  font-size: 15px;
+}
+.sec-pre-footer div ul li {
+  line-height: 40px;
+}
+.sec-pre-footer div ul li i {
+  color: #929aa3;
+  margin-right: 10px;
+}
+.sec-pre-footer div ul li a {
+  color: #7abc64;
+}
+.sec-pre-footer div ul li a:hover {
+  color: #94f075;
+}
+.sec-pre-footer .link-list {
+  flex-grow: 1;
+}
+.sec-pre-footer .link-list ul li {
+  font-size: 17px;
+}
+.sec-pre-footer .link-list ul li i {
+  color: #7abc64;
+}
+.sec-pre-footer div:last-child {
+  text-align: center;
+}
+.sec-pre-footer div:last-child img {
+  margin-bottom: 30px;
+}
+
+footer section {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1c1d1e;
+}
+footer section div:first-child span {
+  color: #69aa53;
+  font-size: 13px;
+  font-weight: lighter;
+}
+footer section div:first-child span:hover {
+  color: #94f075;
+  cursor: pointer;
+}
+footer section div:first-child p {
+  font-size: 13px;
+  color: #929aa3;
+  font-weight: lighter;
+}
+footer section div:last-child {
+  flex-basis: 10%;
+}
+footer section div:last-child ul {
+  display: flex;
+  justify-content: space-between;
+}
+footer section div:last-child ul li > a {
+  color: white;
+}
+footer section div:last-child ul li > a:hover {
+  color: #d8d8d8;
 }
 
 * {
@@ -465,7 +601,22 @@ section {
 }
 
 .bg {
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  min-width: 100%;
+  background-position: center;
+  transition: 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+.bg:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+input {
+  background-color: #d8d8d8;
+  padding: 15px 1em;
+  width: 100%;
+  outline: 0;
+  border: none;
 }
