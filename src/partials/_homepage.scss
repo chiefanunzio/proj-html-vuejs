@@ -134,12 +134,12 @@ header {
     ul {
         li {
             margin: 30px 0;
-            border: 2px solid #d8d8d8;
+            border: 2px solid $color-input;
             border-radius: 5px;
         }
 
         input {
-            background-color: #e4e2e2e0;
+            background-color: $color-input;
             padding: 15px 1em;
             width: 100%;
             outline: 0;
@@ -149,12 +149,11 @@ header {
     }
 }
 
-.learn-sec {
+.sec-learn {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 80px 180px;
     background-image: url('img/bg-car.jpg');
     background-size: cover;
     color: $color-primary;
@@ -171,10 +170,12 @@ header {
 }
 
 .sec-course {
+    padding-top: 20px;
     height: 70vh;
     display: flex;
     justify-content: flex-end;
     position: relative;
+
     background-image: url('img/bg-car-w.jpg');
     background-size: cover;
     background-position: center bottom;
@@ -204,7 +205,7 @@ header {
     .course-card {
         @include card;
         top: -40px;
-        left: 180px;
+        left: 190px;
         max-width: 420px;
         padding-bottom: 70px;
         height: 400px;
@@ -238,6 +239,7 @@ header {
 .sec-rate {
     display: flex;
     justify-content: space-between;
+    padding-top: 0;
 
     >div {
         @include card;
@@ -257,6 +259,7 @@ header {
     }
 
     .static {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -273,11 +276,76 @@ header {
         }
 
         .animated {
-            position: absolute;
-            height: 200px;
-            width: 200px;
-            border: 10px solid $color-light;
-            border-radius: 100%;
+            @include animated-circle;
+
+        }
+
+    }
+}
+
+.sec-instructors {
+
+    display: flex;
+    align-items: center;
+
+    div {
+        flex-basis: 68%;
+
+        h2 {
+            font-size: 40px;
+            color: $color-secondary-title;
+            margin-bottom: 30px;
         }
     }
+
+    a {
+        flex-grow: 1;
+        text-align: center;
+    }
+}
+
+.sec-card-instructors {
+    padding-top: 0;
+    display: flex;
+    justify-content: space-between;
+
+    div {
+        @include card;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        width: calc(100% / 3 - 8px);
+        border-top: 6px solid $color-light;
+
+        &::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        img {
+            width: 100%;
+            transition: 0.3s ease-in-out;
+            &:hover{
+                @include hover-img;
+            }
+        }
+
+        h3 {
+            font-size: 25px;
+            margin: 20px 0;
+        }
+
+        ul {
+            width: 50%;
+            display: flex;
+            justify-content: space-evenly;
+            align-content: center;
+            color: $color-title-light;
+            margin-bottom: 20px;
+        }
+    }
+
 }

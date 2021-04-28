@@ -6,6 +6,7 @@ $color-secondary-title:#494c4e;
 $color-title-light:#a7adb4;
 $color-strong:#69aa53;
 $color-plus: #7799ad;
+$color-input:#d8d8d8;
 //bg
 $bg-nav:rgba(68, 66, 66, 0.3);
 $bg-navbar:#484848;
@@ -14,7 +15,7 @@ $shadow:0 0 25px 5px rgb(0 0 0 / 20%);
 
 // misura standard laterale
 @mixin padding {
-    padding: 0 200px;
+    padding: 80px 200px;
 }
 
 // regole dei button classici
@@ -31,12 +32,13 @@ $shadow:0 0 25px 5px rgb(0 0 0 / 20%);
         transition: 0.4s;
     }
 }
+
 // button secondari
 @mixin btn-secondary {
     padding: 10px 20px;
     font-size: 13px;
     font-weight: 700;
-    border:3px solid $color-plus;
+    border: 3px solid $color-plus;
     border-radius: 25px;
     color: $color-plus;
 
@@ -45,7 +47,7 @@ $shadow:0 0 25px 5px rgb(0 0 0 / 20%);
         border-color: $color-light;
         transition: 0.4s;
     }
-    
+
 }
 
 // regole dei btn in fix
@@ -91,12 +93,28 @@ $shadow:0 0 25px 5px rgb(0 0 0 / 20%);
     border-right: 710px solid transparent;
 }
 
-@mixin card{
+@mixin card {
     position: absolute;
-    background-color:$color-primary;
+    background-color: $color-primary;
     box-shadow: $shadow;
     padding: 40px 50px;
     border-radius: 10px;
     text-align: center;
     z-index: 99;
+}
+
+@mixin animated-circle {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border: 10px solid;
+    border-radius: 100%;
+    border-color: $color-light;
+}
+
+@mixin hover-img {
+    transform: scale(1.1);
+    filter: contrast(110%);
+    box-shadow: $shadow;
+    
 }

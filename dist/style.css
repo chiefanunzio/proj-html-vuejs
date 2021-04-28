@@ -29,7 +29,7 @@ header > div {
   font-size: 12px;
 }
 header nav {
-  padding: 0 200px;
+  padding: 80px 200px;
   background-color: rgba(68, 66, 66, 0.3);
   padding-top: 30px;
   padding-bottom: 30px;
@@ -137,33 +137,33 @@ header nav ul .menu a:hover {
   border-radius: 5px;
 }
 .form-card ul input {
-  background-color: #e4e2e2e0;
+  background-color: #d8d8d8;
   padding: 15px 1em;
   width: 100%;
   outline: 0;
   border: none;
 }
 
-.learn-sec {
+.sec-learn {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 80px 180px;
   background-image: url("img/bg-car.jpg");
   background-size: cover;
   color: white;
 }
-.learn-sec h2 {
+.sec-learn h2 {
   font-size: 40px;
   margin-bottom: 15px;
 }
-.learn-sec span {
+.sec-learn span {
   margin-right: 80px;
   font-size: 35px;
 }
 
 .sec-course {
+  padding-top: 20px;
   height: 70vh;
   display: flex;
   justify-content: flex-end;
@@ -205,7 +205,7 @@ header nav ul .menu a:hover {
   text-align: center;
   z-index: 99;
   top: -40px;
-  left: 180px;
+  left: 190px;
   max-width: 420px;
   padding-bottom: 70px;
   height: 400px;
@@ -233,6 +233,7 @@ header nav ul .menu a:hover {
 .sec-rate {
   display: flex;
   justify-content: space-between;
+  padding-top: 0;
 }
 .sec-rate > div {
   position: absolute;
@@ -256,6 +257,7 @@ header nav ul .menu a:hover {
   margin: 30px 0;
 }
 .sec-rate .static {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -274,8 +276,74 @@ header nav ul .menu a:hover {
   position: absolute;
   height: 200px;
   width: 200px;
-  border: 10px solid #7abc64;
+  border: 10px solid;
   border-radius: 100%;
+  border-color: #7abc64;
+}
+
+.sec-instructors {
+  display: flex;
+  align-items: center;
+}
+.sec-instructors div {
+  flex-basis: 68%;
+}
+.sec-instructors div h2 {
+  font-size: 40px;
+  color: #494c4e;
+  margin-bottom: 30px;
+}
+.sec-instructors a {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.sec-card-instructors {
+  padding-top: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.sec-card-instructors div {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.2);
+  padding: 40px 50px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 99;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: calc(100% / 3 - 8px);
+  border-top: 6px solid #7abc64;
+}
+.sec-card-instructors div::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.sec-card-instructors div img {
+  width: 100%;
+  transition: 0.3s ease-in-out;
+}
+.sec-card-instructors div img:hover {
+  transform: scale(1.1);
+  filter: contrast(110%);
+  box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.2);
+}
+.sec-card-instructors div h3 {
+  font-size: 25px;
+  margin: 20px 0;
+}
+.sec-card-instructors div ul {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  color: #a7adb4;
+  margin-bottom: 20px;
 }
 
 * {
@@ -321,7 +389,7 @@ a {
 }
 
 section {
-  padding: 0 200px;
+  padding: 80px 200px;
 }
 
 .lg-p {
