@@ -3,8 +3,9 @@ $color-primary:white;
 $color-secondary:#929aa3;
 $color-light:#7abc64;
 $color-secondary-title:#494c4e;
+$color-title-light:#a7adb4;
 $color-strong:#69aa53;
-$color-plus: #0f1d1f;
+$color-plus: #7799ad;
 //bg
 $bg-nav:rgba(68, 66, 66, 0.3);
 $bg-navbar:#484848;
@@ -30,6 +31,22 @@ $shadow:0 0 25px 5px rgb(0 0 0 / 20%);
         transition: 0.4s;
     }
 }
+// button secondari
+@mixin btn-secondary {
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    border:3px solid $color-plus;
+    border-radius: 25px;
+    color: $color-plus;
+
+    &:hover {
+        color: $color-light;
+        border-color: $color-light;
+        transition: 0.4s;
+    }
+    
+}
 
 // regole dei btn in fix
 @mixin fix-btn {
@@ -37,6 +54,7 @@ $shadow:0 0 25px 5px rgb(0 0 0 / 20%);
     position: fixed;
     top: 140px;
     right: 15px;
+    z-index: 900;
 
     div {
         box-shadow: $shadow;
@@ -71,4 +89,14 @@ $shadow:0 0 25px 5px rgb(0 0 0 / 20%);
     border-top: 200px solid #e4eaed;
     border-left: 800px solid transparent;
     border-right: 710px solid transparent;
+}
+
+@mixin card{
+    position: absolute;
+    background-color:$color-primary;
+    box-shadow: $shadow;
+    padding: 40px 50px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 99;
 }

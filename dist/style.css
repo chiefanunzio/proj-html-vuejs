@@ -60,13 +60,14 @@ header nav ul li > div {
 }
 header nav ul .menu {
   position: relative;
-  margin-top: 20px;
 }
 header nav ul .menu:hover > div {
   width: 100%;
 }
 header nav ul .menu a {
   color: white;
+  font-size: 13px;
+  font-weight: 700;
 }
 header nav ul .menu a:hover {
   color: #69aa53;
@@ -77,6 +78,7 @@ header nav ul .menu a:hover {
   position: fixed;
   top: 140px;
   right: 15px;
+  z-index: 900;
 }
 .fix-button div {
   box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.2);
@@ -93,7 +95,7 @@ header nav ul .menu a:hover {
 .fix-button div span {
   font-size: 12px;
   font-weight: 700;
-  color: #0f1d1f;
+  color: #7799ad;
 }
 
 .form-section {
@@ -114,18 +116,18 @@ header nav ul .menu a:hover {
 
 .form-card {
   position: absolute;
-  background-color: #fff;
-  top: -50px;
-  right: 180px;
-  max-width: 500px;
+  background-color: white;
   box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
   padding: 40px 50px;
+  border-radius: 10px;
   text-align: center;
   z-index: 99;
+  top: -40px;
+  right: 180px;
+  max-width: 550px;
 }
 .form-card h3 {
-  color: #69aa53;
+  color: #7abc64;
   margin-bottom: 40px;
   font-size: 30px;
 }
@@ -147,7 +149,7 @@ header nav ul .menu a:hover {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 60px 180px;
+  padding: 80px 180px;
   background-image: url("img/bg-car.jpg");
   background-size: cover;
   color: white;
@@ -162,12 +164,26 @@ header nav ul .menu a:hover {
 }
 
 .sec-course {
-  position: relative;
   height: 70vh;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
   background-image: url("img/bg-car-w.jpg");
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
+}
+.sec-course .tipe-of-course {
+  text-align: center;
+  margin: 40px 20px;
+}
+.sec-course .tipe-of-course h3 {
+  margin: 20px 0;
+  font-weight: bold;
+  color: #7799ad;
+}
+.sec-course .tipe-of-course img {
+  width: 190px;
 }
 .sec-course #triangle {
   position: absolute;
@@ -179,6 +195,87 @@ header nav ul .menu a:hover {
   border-top: 200px solid #e4eaed;
   border-left: 800px solid transparent;
   border-right: 710px solid transparent;
+}
+.sec-course .course-card {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.2);
+  padding: 40px 50px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 99;
+  top: -40px;
+  left: 180px;
+  max-width: 420px;
+  padding-bottom: 70px;
+  height: 400px;
+}
+.sec-course .course-card .ancor-rel {
+  position: relative;
+}
+.sec-course .course-card img {
+  position: absolute;
+  left: -50px;
+  top: -40px;
+  border-top-left-radius: 10px;
+  width: 100px;
+}
+.sec-course .course-card h2 {
+  font-size: 37px;
+  font-weight: 800;
+  color: #494c4e;
+  margin-bottom: 20px;
+}
+.sec-course .course-card p {
+  margin-bottom: 60px;
+}
+
+.sec-rate {
+  display: flex;
+  justify-content: space-between;
+}
+.sec-rate > div {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.2);
+  padding: 40px 50px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 99;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: calc(100% /3 - 7px);
+  border-top: 6px solid #7abc64;
+}
+.sec-rate > div h3 {
+  color: #a7adb4;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 30px 0;
+}
+.sec-rate .static {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 200px;
+  margin-bottom: 20px;
+  border: 10px solid #a7adb4;
+  border-radius: 100%;
+}
+.sec-rate .static span {
+  font-size: 50px;
+  font-weight: 500;
+  color: #a7adb4;
+}
+.sec-rate .static .animated {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  border: 10px solid #7abc64;
+  border-radius: 100%;
 }
 
 * {
@@ -209,6 +306,20 @@ a {
   transition: 0.4s;
 }
 
+.btn-secondary {
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 700;
+  border: 3px solid #7799ad;
+  border-radius: 25px;
+  color: #7799ad;
+}
+.btn-secondary:hover {
+  color: #7abc64;
+  border-color: #7abc64;
+  transition: 0.4s;
+}
+
 section {
   padding: 0 200px;
 }
@@ -223,4 +334,5 @@ section {
 .sm-p {
   color: #929aa3;
   line-height: 30px;
+  margin-bottom: 40px;
 }
