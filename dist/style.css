@@ -346,6 +346,65 @@ header nav ul .menu a:hover {
   margin-bottom: 20px;
 }
 
+.sec-testimonials {
+  background-image: url("img/testim.jpg");
+  background-size: cover;
+  text-align: center;
+  margin-top: -150px;
+  padding-top: 180px;
+}
+.sec-testimonials h2 {
+  font-size: 40px;
+  color: #494c4e;
+  margin-bottom: 15px;
+}
+.sec-testimonials div img {
+  width: 150px;
+  padding: 10px 0 30px;
+}
+.sec-testimonials div p.sm-p {
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.sec-testimonials div h3 {
+  color: #929aa3;
+}
+
+.sec-news {
+  background-image: url("img/bg-news.jpg");
+  background-size: cover;
+}
+.sec-news > div {
+  margin-top: -120px;
+  text-align: center;
+  background-color: white;
+  padding: 50px 55px;
+  border-top: 7px solid #7799ad;
+  border-radius: 10px;
+}
+.sec-news > div h2 {
+  font-size: 40px;
+  color: #494c4e;
+  margin-bottom: 15px;
+  margin-bottom: 40px;
+}
+.sec-news > div div {
+  display: flex;
+  justify-content: space-between;
+}
+.sec-news > div div div {
+  display: flex;
+  flex-direction: column;
+  width: calc(100%/2 - 15px);
+  height: 500px;
+}
+.sec-news > div div .img-1 {
+  background-image: url("img/blog-1.jpg");
+}
+.sec-news > div div .img-2 {
+  background-image: url("img/blog-2.jpg");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -403,4 +462,10 @@ section {
   color: #929aa3;
   line-height: 30px;
   margin-bottom: 40px;
+}
+
+.bg {
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-width: 100%;
 }
