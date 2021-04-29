@@ -5,29 +5,29 @@ header {
     background-size: cover;
     background-position: -180px 0px;
     height: 88vh;
-    
+
     #title {
         //titolo jumbo
-        
+
         color: $color-primary;
         background-color: transparent;
         width: 70%;
         height: 450px;
         justify-content: center;
         flex-direction: column;
-        
+
         h1 {
             font-size: 60px;
         }
-        
+
         h3 {
             font-size: 25px;
             font-weight: 500;
             line-height: 60px;
         }
-        
+
     }
-    
+
     >div {
         background: $bg-navbar;
         color: $color-secondary;
@@ -36,7 +36,7 @@ header {
         padding: 15px 200px;
         font-size: 12px;
     }
-    
+
     nav {
         @include padding;
         transition: 0.3s ease-in-out;
@@ -48,7 +48,7 @@ header {
         justify-content: space-between;
         align-items: center;
         z-index: 9999;
-        
+
         img {
             max-height: 48px;
             margin-right: 100px;
@@ -146,12 +146,12 @@ header {
     }
 
     ul {
+        
         li {
             margin: 30px 0;
             border: 2px solid $color-input;
             border-radius: 5px;
         }
-
 
     }
 }
@@ -196,6 +196,9 @@ header {
 
         .on-hover {
             position: absolute;
+            display: none;
+            top: 50px;
+            left: 50px;
             padding: 2px 5px;
             color: $color-primary;
             font-size: 12px;
@@ -393,6 +396,7 @@ header {
     text-align: center;
     margin-top: -150px;
     padding-top: 180px;
+    overflow: hidden;
 
     h2 {
         font-size: 40px;
@@ -414,6 +418,23 @@ header {
 
         h3 {
             color: $color-secondary;
+            margin-bottom: 30px;
+        }
+    }
+
+
+
+    ul.bullets {
+        display: flex;
+        justify-content: center;
+
+        li {
+            list-style-type: none;
+            color: $color-secondary;
+            cursor: pointer;
+            padding: 0 5px;
+            font-size: 20px;
+            
         }
     }
 }
@@ -620,6 +641,7 @@ footer {
         background-color: $bg-footer;
         padding-top: 60px;
         padding-bottom: 60px;
+
         & div:first-child {
             span {
                 color: $color-strong;

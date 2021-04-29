@@ -213,13 +213,17 @@
                     <p class="lg-p"> Here's wath our happy drivers had to say about our services:</p>
                 </div>
 
-                <div>
-                    <img src="img/test-1.png" alt="">
-                    <p class="sm-p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora deleniti quod
-                        similique sed vitae sunt repellendus labore, officiis porro dicta minima, veniam explicabo aut!
-                        Repellendus obcaecati molestiae doloribus illum perspiciatis!</p>
-                    <h3>Grant Harvey</h3>
+                <div v-for="(slide,i) in slides">
+                    <img :src="slide.img" alt="">
+                    <p class="sm-p">{{slide.des}}</p>
+                    <h3>{{slide.name}}</h3>
                 </div>
+                
+                <ul class="bullets">
+                    <li v-for="(slide,i) in slides" @click="selectSlide(i)" v-html="i==current ? '&#9679;' : '&omicron;'"></li>
+                </ul>
+
+                
             </section>
             <!-- sezione blog e news -->
             <section class="sec-news">

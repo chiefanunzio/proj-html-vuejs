@@ -202,6 +202,9 @@ header nav ul .menu a:hover {
 }
 .sec-course .tipe-of-course .on-hover {
   position: absolute;
+  display: none;
+  top: 50px;
+  left: 50px;
   padding: 2px 5px;
   color: white;
   font-size: 12px;
@@ -414,6 +417,7 @@ header nav ul .menu a:hover {
   text-align: center;
   margin-top: -150px;
   padding-top: 180px;
+  overflow: hidden;
 }
 .sec-testimonials h2 {
   font-size: 40px;
@@ -430,6 +434,18 @@ header nav ul .menu a:hover {
 }
 .sec-testimonials div h3 {
   color: #929aa3;
+  margin-bottom: 30px;
+}
+.sec-testimonials ul.bullets {
+  display: flex;
+  justify-content: center;
+}
+.sec-testimonials ul.bullets li {
+  list-style-type: none;
+  color: #929aa3;
+  cursor: pointer;
+  padding: 0 5px;
+  font-size: 20px;
 }
 
 .sec-news {
