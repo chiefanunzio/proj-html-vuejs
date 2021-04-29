@@ -213,15 +213,15 @@
                     <p class="lg-p"> Here's wath our happy drivers had to say about our services:</p>
                 </div>
 
-                <div v-for="(slide,i) in slides">
-                    <img :src="slide.img" alt="">
-                    <p class="sm-p">{{slide.des}}</p>
-                    <h3>{{slide.name}}</h3>
+                <div>
+                    <img :src="slides[current].img" alt="">
+                    <p class="sm-p">{{slides[current].des}}</p>
+                    <h3>{{slides[current].name}}</h3>
                 </div>
                 
-                <ul class="bullets">
-                    <li v-for="(slide,i) in slides" @click="selectSlide(i)" v-html="i==current ? '&#9679;' : '&omicron;'"></li>
-                </ul>
+                <!-- <ul class="bullets">
+                    <li v-for="(slide,i) in slides" v-html="i==current ? '&#9679;' : '&omicron;'"></li>
+                </ul> -->
 
                 
             </section>
