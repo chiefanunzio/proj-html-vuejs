@@ -1,3 +1,19 @@
+@-webkit-keyframes moveToRight {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(300px);
+  }
+}
+@keyframes moveToRight {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(300px);
+  }
+}
 header {
   background-image: url("img/jumbo.jpg");
   background-size: cover;
@@ -38,6 +54,7 @@ header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 9999;
 }
 header nav img {
   max-height: 48px;
@@ -98,6 +115,15 @@ header nav ul .menu a:hover {
   font-size: 12px;
   font-weight: 700;
   color: #7799ad;
+}
+.fix-button div {
+  overflow: hidden;
+}
+.fix-button div:hover img {
+  -webkit-animation: moveToRight 0.3s ease-in-out;
+          animation: moveToRight 0.3s ease-in-out;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
 }
 
 .form-section {
@@ -169,8 +195,18 @@ header nav ul .menu a:hover {
   background-repeat: no-repeat;
 }
 .sec-course .tipe-of-course {
+  position: relative;
   text-align: center;
   margin: 40px 20px;
+  overflow: hidden;
+}
+.sec-course .tipe-of-course .on-hover {
+  position: absolute;
+  padding: 2px 5px;
+  color: white;
+  font-size: 12px;
+  border: 1px solid white;
+  background-color: rgba(53, 54, 55, 0.9);
 }
 .sec-course .tipe-of-course h3 {
   margin: 20px 0;
@@ -178,7 +214,12 @@ header nav ul .menu a:hover {
   color: #7799ad;
 }
 .sec-course .tipe-of-course img {
+  transition: 0.3s ease-in-out;
   width: 190px;
+}
+.sec-course .tipe-of-course img:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
 }
 .sec-course #triangle {
   position: absolute;
@@ -209,9 +250,11 @@ header nav ul .menu a:hover {
   position: relative;
 }
 .sec-course .course-card img {
+  transform: scale(1.1);
+  opacity: 0.9;
   position: absolute;
-  left: -50px;
-  top: -40px;
+  left: -45px;
+  top: -35px;
   border-top-left-radius: 10px;
   width: 100px;
 }
@@ -334,6 +377,35 @@ header nav ul .menu a:hover {
   align-content: center;
   color: #a7adb4;
   margin-bottom: 20px;
+}
+.sec-card-instructors div ul li {
+  position: relative;
+}
+.sec-card-instructors div ul li:hover .top-toltip {
+  display: block;
+}
+.sec-card-instructors div ul li .top-tip {
+  position: absolute;
+  display: none;
+  bottom: 120%;
+  left: -20px;
+  padding: 2px 4px;
+  background-color: black;
+  opacity: 0.7;
+  color: #fff;
+  text-align: center;
+  font-size: 10px;
+  border-radius: 5px;
+}
+.sec-card-instructors div ul li .top-tip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
 }
 
 .sec-testimonials {
@@ -514,6 +586,8 @@ footer section {
   display: flex;
   justify-content: space-between;
   background-color: #1c1d1e;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 footer section div:first-child span {
   color: #69aa53;
@@ -543,6 +617,14 @@ footer section div:last-child ul li > a:hover {
   color: #e8ece7;
 }
 
+@keyframes moveToRight {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(300px);
+  }
+}
 * {
   margin: 0;
   padding: 0;

@@ -5,7 +5,7 @@ header {
     background-size: cover;
     background-position: -180px 0px;
     height: 88vh;
-
+    
     #title {
         //titolo jumbo
         
@@ -15,19 +15,19 @@ header {
         height: 450px;
         justify-content: center;
         flex-direction: column;
-
+        
         h1 {
             font-size: 60px;
         }
-
+        
         h3 {
             font-size: 25px;
             font-weight: 500;
             line-height: 60px;
         }
-
+        
     }
-
+    
     >div {
         background: $bg-navbar;
         color: $color-secondary;
@@ -36,7 +36,7 @@ header {
         padding: 15px 200px;
         font-size: 12px;
     }
-
+    
     nav {
         @include padding;
         transition: 0.3s ease-in-out;
@@ -47,7 +47,8 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
+        z-index: 9999;
+        
         img {
             max-height: 48px;
             margin-right: 100px;
@@ -100,6 +101,17 @@ header {
 // bottoni in fixed laterali
 .fix-button {
     @include fix-btn;
+
+    div {
+        overflow: hidden;
+
+        &:hover img {
+            animation: moveToRight 0.3s ease-in-out;
+            animation-delay: 500ms;
+        }
+
+    }
+
 }
 
 .form-section {
@@ -177,8 +189,20 @@ header {
     background-repeat: no-repeat;
 
     .tipe-of-course {
+        position: relative;
         text-align: center;
         margin: 40px 20px;
+        overflow: hidden;
+
+        .on-hover {
+            position: absolute;
+            padding: 2px 5px;
+            color: $color-primary;
+            font-size: 12px;
+            border: 1px solid $color-primary;
+            background-color: $bg-nav-resize;
+
+        }
 
         h3 {
             margin: 20px 0;
@@ -187,7 +211,14 @@ header {
         }
 
         img {
+            transition: 0.3s ease-in-out;
             width: 190px;
+
+            &:hover {
+
+                @include bg-hover;
+            }
+
         }
     }
 
@@ -210,9 +241,10 @@ header {
         }
 
         img {
+            @include bg-hover;
             position: absolute;
-            left: -50px;
-            top: -40px;
+            left: -45px;
+            top: -35px;
             border-top-left-radius: 10px;
             width: 100px;
         }
@@ -336,6 +368,20 @@ header {
             align-content: center;
             color: $color-title-light;
             margin-bottom: 20px;
+
+            li {
+                position: relative;
+
+                &:hover .top-toltip {
+                    display: block;
+                }
+
+                .top-tip {
+                    @include top-tooltip;
+
+                }
+
+            }
         }
     }
 
@@ -534,6 +580,7 @@ header {
 
             a {
                 color: $color-light;
+
                 &:hover {
                     color: $color-hover-link;
                 }
@@ -544,6 +591,7 @@ header {
 
     .link-list {
         flex-grow: 1;
+
         ul li {
             font-size: 17px;
 
@@ -570,7 +618,8 @@ footer {
         display: flex;
         justify-content: space-between;
         background-color: $bg-footer;
-
+        padding-top: 60px;
+        padding-bottom: 60px;
         & div:first-child {
             span {
                 color: $color-strong;
@@ -599,9 +648,9 @@ footer {
                 justify-content: space-between;
 
                 li>a {
-                    color:$color-primary;
-                    
-                    &:hover{
+                    color: $color-primary;
+
+                    &:hover {
                         color: $color-input;
                     }
 
@@ -610,3 +659,4 @@ footer {
         }
     }
 }
+
