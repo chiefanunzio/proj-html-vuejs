@@ -35,12 +35,12 @@
 
         <header>
             <!-- piccolo header -->
-            <div>
+            <div :class="(pagescroll == true) ? 'display-none':''">
                 <span>We have a 95% Successful Pass Rate!</span>
                 <span><i class="fas fa-phone"></i> Give us a call to book your tuition! 1-800-555-555</span>
             </div>
             <!-- resize navbar -->
-            <nav>
+            <nav :class="(pagescroll == true) ? 'small-navbar': ''">
                 <img src="img/logo-mid.png" alt="">
                 <ul>
                     <li v-for='option in navOption' class="menu">
@@ -54,7 +54,7 @@
 
             </nav>
 
-            <div id="title">
+            <div id="title" :class="(pagescroll == true) ? 'pad-top': ''">
                 <h1>Drive with Avada</h1>
                 <h3>We offer the finest driving tuition money can buy</h3>
             </div>
@@ -62,7 +62,7 @@
 
         <main>
             <!-- section form -->
-            <section class="form-section">
+            <section class="form-section" >
                 <div>
                     <h2>Get Behind the Wheel</h2>
                     <p class="lg-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptatem impedit ea

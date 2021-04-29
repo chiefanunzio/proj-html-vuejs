@@ -19,6 +19,23 @@
 
 }
 
+.pad-top{
+    padding-top:320px;
+}
+
+.display-none{
+    display: none;
+}
+
+.small-navbar{
+    position: fixed;
+    top: 0;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: $bg-nav-resize;
+    opacity: 0.8;
+}
+
 ul li {
     list-style: none;
 }

@@ -8,6 +8,7 @@ header {
 
     #title {
         //titolo jumbo
+        
         color: $color-primary;
         background-color: transparent;
         width: 70%;
@@ -38,7 +39,8 @@ header {
 
     nav {
         @include padding;
-
+        transition: 0.3s ease-in-out;
+        width: 100%;
         background-color: $bg-nav;
         padding-top: 30px;
         padding-bottom: 30px;
