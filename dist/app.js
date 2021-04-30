@@ -14,19 +14,19 @@ function initVue() {
       navOption: ['HOME', 'ABOUT', 'PRICES', 'COURSES', 'LOCATIONS', 'BLOG'],
       slides: [{
         'img': 'img/test-1.png',
-        'des': 'Grant description',
+        'des': 'Grant description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, quos.',
         'name': 'Grant Harvey'
       }, {
         'img': 'img/test-2.png',
-        'des': 'description Harold Green',
+        'des': 'description Harold Green Lorem ipsum  sed fugit nulla facere ducimus quos ea minus nihil architecto vitae!',
         'name': 'Harold Green'
       }, {
         'img': 'img/test-3.png',
-        'des': 'description Kate Lewis',
+        'des': 'description Kate Lewis Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam tenetur magnam hic sed, culpa perferendis.',
         'name': 'Kate Lewis'
       }, {
         'img': 'img/test-4.png',
-        'des': 'Description Kelly Jonson',
+        'des': 'Description Kelly Jonson Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, quos.',
         'name': ' Kelly Jonson'
       }],
       pagescroll: false,
@@ -54,7 +54,9 @@ function initVue() {
         if (this.current >= this.slides.length) {
           this.current = 0;
         }
-      }
+      } // selectedSlide: function(){
+      // }
+
     }
   });
 }

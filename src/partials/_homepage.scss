@@ -132,7 +132,7 @@ header {
     }
 
 }
-
+// sezione del form (card)
 .form-card {
     @include card;
     top: -40px;
@@ -155,7 +155,7 @@ header {
 
     }
 }
-
+// banner contatto
 .sec-learn {
     display: flex;
     justify-content: space-between;
@@ -175,7 +175,7 @@ header {
         font-size: 35px;
     }
 }
-
+// sezione corsi 
 .sec-course {
     padding-top: 20px;
     height: 70vh;
@@ -265,7 +265,7 @@ header {
     }
 
 }
-
+// sezione di rate 
 .sec-rate {
     display: flex;
     justify-content: space-between;
@@ -333,7 +333,7 @@ header {
         text-align: center;
     }
 }
-
+// card istruttori
 .sec-card-instructors {
     padding-top: 0;
     display: flex;
@@ -389,7 +389,7 @@ header {
     }
 
 }
-
+// testimonials 
 .sec-testimonials {
     background-image: url('img/testim.jpg');
     background-size: cover;
@@ -405,6 +405,9 @@ header {
     }
 
     div {
+
+        width: 70%;
+        margin: auto;
 
         img {
             width: 150px;
@@ -438,7 +441,7 @@ header {
         }
     }
 }
-
+// sezione blog e news
 .sec-news {
     background-image: url('img/bg-news.jpg');
     background-size: cover;
@@ -524,7 +527,7 @@ header {
     }
 
 }
-
+// iscrizione alla news-letter
 .sec-mail {
     background-image: url('img/mail.jpg');
     background-size: cover;
@@ -561,7 +564,7 @@ header {
 
     }
 }
-
+// sezione listati
 .sec-pre-footer {
     background-image: url('img/footer.jpg');
     background-size: cover;
@@ -609,7 +612,7 @@ header {
 
         }
     }
-
+    // listato in evidenza
     .link-list {
         flex-grow: 1;
 
@@ -668,12 +671,29 @@ footer {
 
                 display: flex;
                 justify-content: space-between;
+                
+                li {
+                    position: relative;
 
-                li>a {
-                    color: $color-primary;
+                    &:hover span{
 
-                    &:hover {
-                        color: $color-input;
+                        display: block;
+
+                    }
+                    span{
+                        @include bottom-tooltip;
+                        color: white;
+                        
+                    }
+
+
+
+                    a {
+                        color: $color-primary;
+
+                        &:hover {
+                            color: $color-input;
+                        }
                     }
 
                 }

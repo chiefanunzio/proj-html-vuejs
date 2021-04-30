@@ -62,7 +62,7 @@
 
         <main>
             <!-- section form -->
-            <section class="form-section" >
+            <section class="form-section">
                 <div>
                     <h2>Get Behind the Wheel</h2>
                     <p class="lg-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptatem impedit ea
@@ -113,8 +113,8 @@
                         <img src="img/corner.jpg" alt="">
                     </div>
                 </div>
-                
-                
+
+
                 <div class="tipe-of-course">
                     <img src="img/pass.jpg" alt="">
                     <h3>Pass Plus</h3>
@@ -138,8 +138,8 @@
             </section>
             <!-- sezione rate -->
             <section class="sec-rate">
-                <div>
-                    <div class="static">
+               -- <div>
+                     <div class="static">
                         <span>95%</span>
                         <div class="animated first"></div>
                     </div>
@@ -153,19 +153,84 @@
                     </div>
                     <h3>REFERRAL RATE</h3>
                 </div>
-
+                
                 <div>
                     <div class="static">
                         <span>0%</span>
                         <div class="animated zero"></div>
                     </div>
-                    <h3>ACCIDENT RATE</h3>
+                    <h3>ACCIDENT RATE</h3> 
                 </div>
+                   <!-- <div>
+                       <div class="circle-wrap">
+                           <div class="circle">
+                               
+                               <div class="mask full">
+                                   <div class="fill"></div>
+                               </div>
+                               
+                               <div class="mask half">
+                                   <div class="fill"></div>
+                               </div>
+                               
+                               <div class="inside-circle">
+                                   95%
+                               </div>
+                               
+                           </div>
+                        </div>
+                        <h3>PASS RATE</h3>
+                    </div> 
 
-            </section>
+                    <div>
+                        <div class="circle-wrap">
+                            <div class="circle">
+                                
+                                <div class="mask full">
+                                    <div class="fill"></div>
+                                </div>
+                                
+                                <div class="mask half">
+                                    <div class="fill"></div>
+                                </div>
+                                
+                                <div class="inside-circle">
+                                    100%
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <h3>REFERRAL RATE</h3>
+                     </div>
 
-            <!-- sezione istruttori -->
-            <section class="sec-instructors">
+                     <div>
+                        <div class="circle-wrap">
+                            <div class="circle">
+                                
+                                <div class="mask full">
+                                    <div class="fill"></div>
+                                </div>
+                                
+                                <div class="mask half">
+                                    <div class="fill"></div>
+                                </div>
+                                
+                                <div class="inside-circle">
+                                    0%
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <h3>ACCIDENT RATE</h3>
+                     </div> -->
+
+                    
+                    
+                    
+                </section>
+                
+                <!-- sezione istruttori -->
+                <section class="sec-instructors">
                 <div>
                     <h2>Your Instructors</h2>
                     <p class="lg-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nulla sequi
@@ -218,12 +283,13 @@
                     <p class="sm-p">{{slides[current].des}}</p>
                     <h3>{{slides[current].name}}</h3>
                 </div>
-                
-                <!-- <ul class="bullets">
-                    <li v-for="(slide,i) in slides" v-html="i==current ? '&#9679;' : '&omicron;'"></li>
-                </ul> -->
 
-                
+                <ul class="bullets">
+                    <li v-for="(slide,i) in slides" @click="selectedSlide()"
+                        v-html="i==current ? '&#9679;' : '&omicron;'"></li>
+                </ul>
+
+
             </section>
             <!-- sezione blog e news -->
             <section class="sec-news">
@@ -277,8 +343,9 @@
             <section class="sec-pre-footer">
                 <div>
                     <img src="img/logo-mid.png" alt="">
-                    <p class="sm-p">aliquid neque nulla praesentium, tenetur voluptatum nostrum dolorum qui. Laborum placeat dolor quia quisquam corrupti iure voluptatum itaque ducimus ea!</p>
-                    
+                    <p class="sm-p">aliquid neque nulla praesentium, tenetur voluptatum nostrum dolorum qui. Laborum
+                        placeat dolor quia quisquam corrupti iure voluptatum itaque ducimus ea!</p>
+
                 </div>
                 <div>
                     <h3>CONTACT DETAILS</h3>
@@ -320,7 +387,7 @@
                             <i class="far fa-arrow-alt-circle-right "></i>
                             <a href="#">Instructor Training</a>
                         </li>
-                       
+
                     </ul>
                 </div>
 
@@ -335,21 +402,26 @@
         <footer>
             <section>
                 <div>
-                    <p>xcgnh cfgnv xfgx g b<span>sadfgsdafg</span>asdfasdf<span>zxcv zdvcbsd</span></p>
+                    <p>© Copyright 2012 - 2021 | Avada Theme by<span>ThemeFusion</span> | All Rights Reserved | Powered
+                        by<span>WordPress</span></p>
                 </div>
                 <div>
                     <ul>
                         <li>
                             <a href="£"><i class="fab fa-facebook-f"></i></a>
+                            <span class="top-tip">Facebook</span>
                         </li>
                         <li>
                             <a href="£"><i class="fab fa-twitter"></i></a>
+                            <span class="top-tip">Twitter</span></li>
                         </li>
                         <li>
                             <a href="£"><i class="fab fa-youtube"></i></a>
+                            <span class="top-tip">Youtube</span>
                         </li>
                         <li>
                             <a href="£"><i class="fab fa-instagram"></i></a>
+                            <span class="top-tip">Instagram</span>
                         </li>
                     </ul>
                 </div>
@@ -358,5 +430,6 @@
 
     </div>
 </body>
+
 
 </html>
