@@ -385,7 +385,7 @@ header nav ul .menu a:hover {
 .sec-card-instructors div ul li {
   position: relative;
 }
-.sec-card-instructors div ul li:hover .top-toltip {
+.sec-card-instructors div ul li:hover .top-tip {
   display: block;
 }
 .sec-card-instructors div ul li .top-tip {
